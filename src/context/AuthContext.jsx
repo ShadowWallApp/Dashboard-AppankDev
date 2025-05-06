@@ -34,7 +34,7 @@ export const AuthContextProvider = ({ children }) => {
         data: {
           display_name: displayName,
         },
-        emailRedirectTo: 'https://appankdashboard.vercel.app/auth/callback',
+        emailRedirectTo: 'https://dashboardappankdev.vercel.app/auth/callback',
       },
     });
   };
@@ -43,7 +43,7 @@ export const AuthContextProvider = ({ children }) => {
     return supabase.auth.signInWithOAuth({
       provider, // 'google' atau 'facebook'
       options: {
-        redirectTo: "https://appankdashboard.vercel.app/login", // atau bisa route khusus seperti /dashboard
+        redirectTo: "https://dashboardappankdev.vercel.app/login", // atau bisa route khusus seperti /dashboard
       },
     });
   };

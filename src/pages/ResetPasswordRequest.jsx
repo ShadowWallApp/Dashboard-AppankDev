@@ -30,7 +30,8 @@ import {
       }
   
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: "https://appankdashboard.vercel.app/update-password",
+        redirectTo: "https://dashboardappankdev.vercel.app/update-password",
+  
       });
   
       if (error) {
