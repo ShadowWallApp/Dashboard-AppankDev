@@ -137,12 +137,8 @@ const YourComponent = () => {
       mx="auto"
       direction="column"
       mt="6"
-      p={isMobile ? "2" : "4"}
       maxW="100%"
       minH="auto"
-      h="100vh"
-      overflowY="auto"
-      pb="20"
       transition="all 0.3s ease"
     >
       {!isMobile && (
@@ -188,12 +184,12 @@ const YourComponent = () => {
         transition="all 0.3s ease"
       >
         <Flex
-          direction={isMobile ? "column" : "row"}
-          gap={isMobile ? 0 : 4}
-          mb="15px"
+        direction={isMobile ? "column" : "row"}
+        gap={isMobile ? 0 : 4}
+        mb="15px"
         >
-          <FormControl>
-            <FormLabel color={textColor}>First Name</FormLabel>
+          <FormControl mb="15px">
+            <FormLabel  color={textColor}>First Name</FormLabel>
             <Input
               bg={inputBg}
               name="first_name"
@@ -204,8 +200,8 @@ const YourComponent = () => {
               maxWidth="auto"
             />
           </FormControl>
-          <FormControl>
-            <FormLabel color={textColor}>Last Name</FormLabel>
+          <FormControl  >
+            <FormLabel  color={textColor}>Last Name</FormLabel>
             <Input
               bg={inputBg}
               name="last_name"
@@ -355,12 +351,13 @@ const YourComponent = () => {
         </Flex>
       </Box>
 
-      <Box mb={4} p={2}>
+      
         <Text
           fontSize="xs"
           fontStyle="italic"
           color="gray.600"
           textAlign="center"
+          p={5}
         >
           © 2025 All rights reserved .by{" "}
           <a
@@ -374,7 +371,6 @@ const YourComponent = () => {
             AppankDev
           </a>
         </Text>
-      </Box>
     </Flex>
   );
 };

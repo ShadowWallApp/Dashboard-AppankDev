@@ -46,52 +46,40 @@ spacing="4"
       </Box>
 
       {/* Drawer Mobile */}
-      <Drawer
-  placement="left"
-  onClose={onClose}
-  isOpen={isOpen}
-  motionPreset="none" // Hilangkan animasi slide
-  lazyBehavior="keepMounted" // Jangan unmount setiap kali close
->
-  <DrawerOverlay />
-  <DrawerContent
-    w="200px"
-    bg={bgSidebar}
-    color="gray.800"
-    borderRightRadius="xl"
-    boxShadow="base" // Lebih ringan daripada "2xl"
-    transition="none" // Hilangkan transisi agar responsif
-  >
-    <DrawerHeader
-      borderBottomWidth="1px"
-      fontWeight="bold"
-      color={headerColor}
-    >
-      AppankDev
-    </DrawerHeader>
-    <DrawerBody p="6">
-      <SidebarContent
-        onItemClick={(label) => {
-          onSelectPage(label);
-          onClose();
-        }}
-      />
-    </DrawerBody>
-  </DrawerContent>
-</Drawer>
+      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent
+          w="200px"
+          bg={bgSidebar}
+          color="gray.800"
+          borderRightRadius="xl"
+          boxShadow="2xl"
+        >
+          <DrawerHeader borderBottomWidth="1px" fontWeight="bold" color={headerColor}>
+           AppankDev
+          </DrawerHeader>
+          <DrawerBody p="6">
+            <SidebarContent
+              onItemClick={(label) => {
+                onSelectPage(label);
+                onClose();
+              }}
+            />
+            
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </>
   );
 };
 
-const SidebarContent = ({ onItemClick = () => {} }) => {
-  return (
-    <VStack align="start" spacing="1" w="full">
-      <SidebarItem icon={LuLayoutDashboard} label="Dashboard" onClick={() => onItemClick("dashboard")} />
-      <SidebarItem icon={LuFileInput} label="Input Data" onClick={() => onItemClick("formInput")} />
-      <SidebarItem icon={LuTableProperties} label="Tabel" onClick={() => onItemClick("tabel")} />
-    </VStack>
-  );
-};
+const SidebarContent = ({ onItemClick = () => {} }) => (
+  <VStack align="start" spacing="1" w="full">
+    <SidebarItem icon={LuLayoutDashboard} label="Dashboard" onClick={() => onItemClick("dashboard")} />
+    <SidebarItem icon={LuFileInput} label="Input Data" onClick={() => onItemClick("formInput")} />
+    <SidebarItem icon={LuTableProperties} label="Tabel" onClick={() => onItemClick("tabel")} />
+  </VStack>
+);
 
 const SidebarItem = ({ icon, label, onClick }) => {
   const iconColor = useColorModeValue("gray.600", "gray.300");

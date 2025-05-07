@@ -61,30 +61,19 @@ const Dashboard = () => {
       mx="auto"
       direction="column"
       mt="6"
-      p="4" // Tambah padding untuk ruang yang lebih baik
-      maxW="100%"
-      minH="auto" // Hapus minH="500px" untuk fleksibilitas
-      h="100vh" // Gunakan tinggi penuh viewport
-      overflowY="auto" // Pastikan scroll vertikal aktif
-      pb="20" // Tambahkan padding bawah agar footer terlihat
       transition="all 0.3s ease"
     >
+        <Box pb={5}>
       {/* Breadcrumb hanya tampil di desktop */}
       {!isMobile && (
-        <Breadcrumb
-          separator={
-            <Box as="span" color="gray.600" fontWeight="bold">
-              /
-            </Box>
-          }
-          mb={4}
-        >
+        <Breadcrumb>
           <BreadcrumbItem isCurrentPage>
             <BreadcrumbLink color="gray.600">Dashboard</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       )}
-   <Box mb={4} p={2}>
+    </Box>
+   <Box  pb={5}>
         {/* Alert */}
         <Alert
   status="info"
@@ -200,7 +189,6 @@ const Dashboard = () => {
        borderColor={borderColor}
        minH="300px"
        maxW="auto"
-       maxHeight="400px" // Batasi tinggi maksimum Box
        overflowY="auto" // Aktifkan scroll vertikal jika konten melebihi maxHeight
        transition="all 0.3s ease"
       >
@@ -297,26 +285,26 @@ const Dashboard = () => {
 };
 
 const items = [
-  { id: 1, name: "Laptop", category: "Electronics", price: 999.99 },
-  { id: 2, name: "Coffee Maker", category: "Home Appliances", price: 49.99 },
-  { id: 3, name: "Desk Chair", category: "Furniture", price: 150.0 },
-  { id: 4, name: "Smartphone", category: "Electronics", price: 799.99 },
-  { id: 5, name: "Headphones", category: "Accessories", price: 199.99 },
-  { id: 6, name: "Lusifer", category: "Dsds", price: 999.93 },
-  { id: 7, name: "Coffee Maker", category: "Home Appliances", price: 49.99 },
-  { id: 8, name: "Desk Chair", category: "Furniture", price: 150.0 },
-  { id: 9, name: "Smartphone", category: "Electronics", price: 799.99 },
-  { id: 10, name: "Headphones", category: "Accessories", price: 199.99 },
-  { id: 11, name: "Laptop", category: "Electronics", price: 999.99 },
-  { id: 12, name: "Coffee Maker", category: "Home Appliances", price: 49.99 },
-  { id: 13, name: "Desk Chair", category: "Furniture", price: 150.0 },
-  { id: 14, name: "Smartphone", category: "Electronics", price: 799.99 },
-  { id: 15, name: "Headphones", category: "Accessories", price: 199.99 },
-  { id: 16, name: "Laptop", category: "Electronics", price: 999.99 },
-  { id: 17, name: "Coffee Maker", category: "Home Appliances", price: 49.99 },
-  { id: 18, name: "Desk Chair", category: "Furniture", price: 150.0 },
-  { id: 19, name: "Smartphone", category: "Electronics", price: 799.99 },
-  { id: 20, name: "Headphones", category: "Accessories", price: 199.99 },
+  { id: 1, name: "Smart TV", category: "Electronics", price: 599.99 },
+  { id: 2, name: "Espresso Machine", category: "Home Appliances", price: 79.99 },
+  { id: 3, name: "Bookshelf", category: "Furniture", price: 120.0 },
+  { id: 4, name: "Wireless Mouse", category: "Accessories", price: 29.99 },
+  { id: 5, name: "Quantum Gadget", category: "Dsds", price: 1499.95 },
+  { id: 6, name: "Gaming Laptop", category: "Electronics", price: 1299.99 },
+  { id: 7, name: "Toaster Oven", category: "Home Appliances", price: 39.99 },
+  { id: 8, name: "Dining Table", category: "Furniture", price: 250.0 },
+  { id: 9, name: "Bluetooth Earbuds", category: "Accessories", price: 89.99 },
+  { id: 10, name: "Mystic Orb", category: "Dsds", price: 799.93 },
+  { id: 11, name: "Smartphone Pro", category: "Electronics", price: 899.99 },
+  { id: 12, name: "Air Fryer", category: "Home Appliances", price: 99.99 },
+  { id: 13, name: "Office Chair", category: "Furniture", price: 180.0 },
+  { id: 14, name: "Smart Watch", category: "Accessories", price: 249.99 },
+  { id: 15, name: "Gizmo X", category: "Dsds", price: 999.97 },
+  { id: 16, name: "Tablet", category: "Electronics", price: 349.99 },
+  { id: 17, name: "Blender", category: "Home Appliances", price: 59.99 },
+  { id: 18, name: "Sofa Bed", category: "Furniture", price: 450.0 },
+  { id: 19, name: "USB-C Hub", category: "Accessories", price: 49.99 },
+  { id: 20, name: "Enigma Device", category: "Dsds", price: 1199.94 },
   { id: 21, name: "Laptop", category: "Electronics", price: 999.99 },
   { id: 22, name: "Coffee Maker", category: "Home Appliances", price: 49.99 },
   { id: 23, name: "Desk Chair", category: "Furniture", price: 150.0 },

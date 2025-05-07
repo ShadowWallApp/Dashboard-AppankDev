@@ -172,6 +172,25 @@ const toastErrorBorder = useColorModeValue("red.500", "red.300");
             </a>
           </Text>
         </Flex>
+        <Text
+          fontSize="xs"
+          fontStyle="italic"
+          color="gray.600"
+          textAlign="center"
+          p={2}
+        >
+          © 2025 All rights reserved .by{" "}
+          <a
+            href="https://appank-dev.vercel.app/"
+            style={{ color: "#3182ce", textDecoration: "none" }}
+            onMouseOver={(e) => (e.target.style.textDecoration = "underline")}
+            onMouseOut={(e) => (e.target.style.textDecoration = "none")}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            AppankDev
+          </a>
+        </Text>
       </Box>
     </Center>
   );
